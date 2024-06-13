@@ -216,7 +216,7 @@ proxy-providers:
     # 过滤回国等..
   "Subscription_2":
     type: http
-    url: "https://raw.githubusercontent.com/ripaojiedian/freenode/main/sub"
+    url: ""
     path: "./proxy_providers/Subscription_2.yaml"
     proxy: "🧭 探索大陆"
     header:
