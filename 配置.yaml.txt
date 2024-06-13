@@ -214,9 +214,9 @@ proxy-providers:
       additional-prefix: "【01】| " # 为节点名称添加固定前缀
     exclude-filter: "(?i)前往|加入|群|流量|过期|回国|CN|安徽|北京|重庆|福建|甘肃|广东|广西|贵州|海南|河北|黑龙江|河南|湖北|湖南|吉林|江苏|江西|辽宁|内蒙古|宁夏|青海|山东|山西|陕西|上海|四川|天津|西藏|新疆|云南|浙江"
     # 过滤回国等..
-  "Subscription_2":
+  "Subscription_2":分享社
     type: http
-    url: "你的订阅链接2"
+    url: "https://raw.githubusercontent.com/ripaojiedian/freenode/main/sub"
     path: "./proxy_providers/Subscription_2.yaml"
     proxy: "🧭 探索大陆"
     header:
