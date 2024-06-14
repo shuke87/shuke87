@@ -400,7 +400,7 @@ proxy_providers_override: &proxy_providers_override
 
 proxy-providers:
 
-  "Subscription_1": # 胖虎
+  "Subscription_1": 
 
     type: http # 必须, provider 类型,可选 http/file
 
@@ -408,7 +408,7 @@ proxy-providers:
 
     path: "./proxy_providers/Subscription_1.yaml" # 机场配置保存位置
 
-    proxy: "🌐 全球直连"
+    proxy: "🧭 探索大陆"
 
     header:
 
