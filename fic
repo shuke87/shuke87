@@ -404,7 +404,7 @@ proxy-providers:
 
     type: http # 必须, provider 类型,可选 http/file
 
-    url: "https://raw.githubusercontent.com/gitbigg/dy/main/jd" # 注意!如果您的链接中带有“&”字符,请删掉.
+    url: "https://raw.githubusercontent.com/Huibq/TrojanLinks/master/links/ssr" # 注意!如果您的链接中带有“&”字符,请删掉.
 
     path: "./proxy_providers/Subscription_1.yaml" # 机场配置保存位置
 
