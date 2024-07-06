@@ -231,7 +231,7 @@ proxy-providers:
 
   "Subscription_3":
     type: http
-    url: "https://www.xrayvip.com/free.txt"
+    url: "https://flynb.site/sub/?token=F9F9zZcllpdyN5TluF9F9zZF9F9zZ11EEfx0g&tag=mixed"
     path: "./proxy_providers/Subscription_3.yaml"
     proxy: "🧭 探索大陆"
     header:
