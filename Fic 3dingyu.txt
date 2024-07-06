@@ -231,7 +231,7 @@ proxy-providers:
 
   "Subscription_3":
     type: http
-    url: "https://suc.flynb.site/sub?target=clash&url=https%3A%2F%2Fflynb.site%2Fsub%2F%3Ftoken%3DF9F9zZcllpdyN5TluF9F9zZF9F9zZ11EEfx0g%26tag%3Dmixed&insert=false&config=https%3A%2F%2Fraw.githubusercontent.com%2FACL4SSR%2FACL4SSR%2Fmaster%2FClash%2Fconfig%2FACL4SSR_Online.ini&emoji=true&list=true&xudp=false&udp=false&tfo=false&expand=true&scv=false&fdn=false&new_name=true"
+    url: "https://suo.yt/X62anQw"
     path: "./proxy_providers/Subscription_3.yaml"
     proxy: "🧭 探索大陆"
     header:
