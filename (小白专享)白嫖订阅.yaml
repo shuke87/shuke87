@@ -86,48 +86,29 @@ proxy-providers:
     url: "https://mirror.ghproxy.com/https://raw.githubusercontent.com/gitbigg/dy/main/jd"
     path: ./胖虎.yaml
     <<: *pr
-
+additional-prefix: "【01】| " # 为节点名称添加固定前缀
   Hello:
     url: "https://flynb.site/sub?token=F9F9zZcllpdyN5TluF9F9zZF9F9zZ11EEfx0g&tag=mixed"
     path: ./Hello.yaml
     <<: *pr
-
+additional-prefix: "【02】| " # 为节点名称添加固定前缀
   空想家vmess:
     url: "https://raw.githubusercontent.com/Huibq/TrojanLinks/master/links/vmess"
     path: ./空想家vmess.yaml
     <<: *pr
-
+additional-prefix: "【03】| " # 为节点名称添加固定前缀
   空想家ssr:
     url: "https://raw.githubusercontent.com/Huibq/TrojanLinks/master/links/ssr"
     path: ./空想家ssr.yaml
     <<: *pr
-
+additional-prefix: "【04】| " # 为节点名称添加固定前缀
   旺财:
     url: "https://igdux.top/~vless/clash"
     path: ./旺财.yaml
     <<: *pr
+additional-prefix: "【05】| " # 为节点名称添加固定前缀
 
-  白嫖4:
-    url: "https://raw.githubusercontent.com/qjlxg/aggregator/main/data/clash.yaml"
-    path: ./白嫖4.yaml
-    <<: *pr
-
-  白嫖5:
-    url: "https://raw.githubusercontent.com/soroushmirzaei/telegram-configs-collector/main/security/tls"
-    path: ./白嫖5.yaml
-    <<: *pr
-
-  白嫖6:
-    url: "https://raw.githubusercontent.com/ripaojiedian/freenode/main/clash"
-    path: ./白嫖6.yaml
-    <<: *pr
-
-  白嫖7:
-    url: "https://mirror.ghproxy.com/https://raw.githubusercontent.com/go4sharing/sub/main/sub.yaml"
-    path: ./白嫖7.yaml
-    <<: *pr
-
-use: &use {use: [胖虎,Hello,空想家vmess,空想家ssr,旺财,白嫖4,白嫖5,白嫖6,白嫖7]}
+use: &use {use: [胖虎,Hello,空想家vmess,空想家ssr,旺财]}
 
 pres: &pres
   proxies: [🇺🇳 OVERSEAS,🇺🇸 US,🇭🇰 HK,🇼🇸 TW,🇸🇬 SG,🇰🇷 KR,🇯🇵 JP,REJECT,DIRECT]
