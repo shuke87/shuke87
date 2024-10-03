@@ -82,29 +82,29 @@ pr: &pr
       lazy: true
 
 proxy-providers:
-  24.11.20.到期:
-    url: "https://sub2.smallstrawberry.com/api/v1/client/subscribe?token=38f82e959407459796d5be6d9b59461c"
-    path: ./24.11.20.到期.yaml
+  胖虎:
+    url: "https://mirror.ghproxy.com/https://raw.githubusercontent.com/gitbigg/dy/main/jd"
+    path: ./胖虎.yaml
     <<: *pr
 
-  白嫖:
-    url: "https://raw.githubusercontent.com/qjlxg/aggregator/main/data/clash.yaml"
-    path: ./白嫖.yaml
+  Hello:
+    url: "https://flynb.site/sub?token=F9F9zZcllpdyN5TluF9F9zZF9F9zZ11EEfx0g&tag=mixed"
+    path: ./Hello.yaml
     <<: *pr
 
-  白嫖1:
-    url: "https://raw.githubusercontent.com/changfengoss/pub/main/data/2024_08_10/PpoEAg.yaml"
-    path: ./白嫖1.yaml
+  空想家vmess:
+    url: "https://raw.githubusercontent.com/Huibq/TrojanLinks/master/links/vmess"
+    path: ./空想家vmess.yaml
     <<: *pr
 
-  白嫖2:
-    url: "http://172.245.30.41/clash.yaml"
-    path: ./白嫖2.yaml
+  空想家ssr:
+    url: "https://raw.githubusercontent.com/Huibq/TrojanLinks/master/links/ssr"
+    path: ./空想家ssr.yaml
     <<: *pr
 
-  白嫖3:
-    url: "https://raw.githubusercontent.com/ailongfei/aggregator/main/data/clash.yaml"
-    path: ./白嫖3.yaml
+  旺财:
+    url: "https://igdux.top/~vless/clash"
+    path: ./旺财.yaml
     <<: *pr
 
   白嫖4:
