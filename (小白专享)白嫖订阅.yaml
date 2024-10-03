@@ -86,27 +86,27 @@ proxy-providers:
     url: "https://mirror.ghproxy.com/https://raw.githubusercontent.com/gitbigg/dy/main/jd"
     path: ./胖虎.yaml
     <<: *pr
-additional-prefix: "【01】| " # 为节点名称添加固定前缀
+additional-prefix: "【01】| " 
   Hello:
     url: "https://flynb.site/sub?token=F9F9zZcllpdyN5TluF9F9zZF9F9zZ11EEfx0g&tag=mixed"
     path: ./Hello.yaml
     <<: *pr
-additional-prefix: "【02】| " # 为节点名称添加固定前缀
+additional-prefix: "【02】| " 
   空想家vmess:
     url: "https://raw.githubusercontent.com/Huibq/TrojanLinks/master/links/vmess"
     path: ./空想家vmess.yaml
     <<: *pr
-additional-prefix: "【03】| " # 为节点名称添加固定前缀
+additional-prefix: "【03】| " 
   空想家ssr:
     url: "https://raw.githubusercontent.com/Huibq/TrojanLinks/master/links/ssr"
     path: ./空想家ssr.yaml
     <<: *pr
-additional-prefix: "【04】| " # 为节点名称添加固定前缀
+additional-prefix: "【04】| " 
   旺财:
     url: "https://igdux.top/~vless/clash"
     path: ./旺财.yaml
     <<: *pr
-additional-prefix: "【05】| " # 为节点名称添加固定前缀
+additional-prefix: "【05】| " 
 
 use: &use {use: [胖虎,Hello,空想家vmess,空想家ssr,旺财]}
 
