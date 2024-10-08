@@ -1,0 +1,203 @@
+﻿mixed-port: 7890
+ipv6: true
+allow-lan: true
+unified-delay: true
+tcp-concurrent: true
+external-controller: 127.0.0.1:9090
+external-ui: ui
+external-ui-url: "https://github.com/MetaCubeX/metacubexd/archive/refs/heads/gh-pages.zip"
+
+geodata-mode: true
+geo-auto-update: true
+geo-update-interval: 24
+geox-url:
+  geoip: "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/latest/download/geoip.dat"
+  geosite: "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/latest/download/geosite.dat"
+  mmdb: "https://github.com/Loyalsoldier/geoip/releases/latest/download/Country.mmdb"
+  asn: "https://github.com/xishang0128/geoip/releases/download/latest/GeoLite2-ASN.mmdb"
+
+find-process-mode: strict
+global-client-fingerprint: chrome
+
+profile:
+  store-selected: true
+  store-fake-ip: true
+
+sniffer:
+  enable: true
+  sniff:
+    HTTP:
+      ports: [80, 8080-8880]
+      override-destination: true
+    TLS:
+      ports: [443, 8443]
+    QUIC:
+      ports: [443, 8443]
+  skip-domain:
+    - "Mijia Cloud"
+
+tun:
+  enable: true
+  stack: mixed
+  dns-hijack:
+    - "any:53"
+    - "tcp://any:53"
+  auto-route: true
+  auto-redirect: true
+  auto-detect-interface: true
+
+dns:
+  enable: true
+  respect-rules: false
+  default-nameserver: [180.76.76.76,180.184.1.1]
+  enhanced-mode: fake-ip
+  fake-ip-range: 198.18.0.1/16
+  fake-ip-filter-mode: blacklist
+  fake-ip-filter:
+    - '+.lan'
+    - '+.local'
+  nameserver-policy:
+    "geosite:cn,private":
+    - https://dns.alidns.com/dns-query
+    - https://doh.pub/dns-query
+  nameserver:
+    - https://cloudflare-dns.com/dns-query
+    - https://dns.google/dns-query
+  proxy-server-nameserver:
+    - https://dns-cdn-hw.trli.club/doh/dns
+    - https://doh.apad.pro/dns-query
+
+
+proxies:
+  - name: DNS-OUT
+    type: dns
+
+pr: &pr
+    type: http
+    exclude-filter: 官网|套餐|剩余|重置|以下|禁止|境外|境内|校园|每月|一元|TG|群|换|区
+    health-check:
+      enable: true
+      url: 'https://www.gstatic.com/generate_204'
+      interval: 300
+      lazy: true
+
+proxy-providers:
+     胖虎:
+    url: "https://mirror.ghproxy.com/https://raw.githubusercontent.com/gitbigg/dy/main/jd"
+    path: ./胖虎.yaml
+    <<: *pr
+
+  Hello:
+    url: "https://flynb.site/sub?token=F9F9zZcllpdyN5TluF9F9zZF9F9zZ11EEfx0g&tag=mixed"
+    path: ./Hello.yaml
+    <<: *pr
+
+  空想家vmess:
+    url: "https://raw.githubusercontent.com/Huibq/TrojanLinks/master/links/vmess"
+    path: ./空想家vmess.yaml
+    <<: *pr
+
+  白嫖:
+    url: "https://raw.githubusercontent.com/Jsnzkpg/Jsnzkpg/Jsnzkpg/Jsnzkpg"
+    path: ./白嫖.yaml
+    <<: *pr
+
+  旺财:
+    url: "https://igdux.top/~vless/clash"
+    path: ./旺财.yaml
+    <<: *pr
+
+
+use: &use {use: [胖虎,Hello,空想家vmess,空想家ssr,旺财]}
+
+pres: &pres
+  proxies: [🇺🇳 OVERSEAS,🇺🇸 US,🇭🇰 HK,🇼🇸 TW,🇸🇬 SG,🇰🇷 KR,🇯🇵 JP,REJECT,DIRECT]
+
+auto: &auto {type: url-test,lazy: true,<<: *use}
+
+load: &load {type: load-balance,lazy: true,<<: *use}
+
+proxy-groups:
+
+  - name: 🇺🇳 OVERSEAS
+    type: select
+    lazy: true
+    exclude-filter: CN|国内|香港|台湾|狮城|新加坡|韩国|日本|美国
+    proxies:
+      - ♻️ AUTO
+      - 🔰 LOAD
+      - REJECT
+      - DIRECT
+      - 🇭🇰 HK
+      - 🇼🇸 TW
+      - 🇸🇬 SG
+      - 🇰🇷 KR
+      - 🇯🇵 JP
+      - 🇺🇸 US
+    <<: *use
+    icon: 'https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Global.png'
+
+  - name: 🇨🇳 DOMESTIC
+    type: select
+    proxies:
+      - DIRECT
+      - REJECT
+      - 🇺🇳 OVERSEAS
+    icon: 'https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Domestic.png'
+
+  - {name: 🎉 Google,type: select,<<: *pres,icon: 'https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Google.png'}
+
+  - {name: 🐦 Twitter,type: select,<<: *pres,icon: 'https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Twitter.png'}
+
+  - {name: 💬 Telegram,type: select,<<: *pres,icon: 'https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Telegram.png'}
+
+
+  - {name: ♻️ AUTO,<<: *auto,icon: 'https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Auto.png'}
+
+  - {name: 🔰 LOAD,<<: *load,icon: 'https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Round_Robin.png'}
+
+  - {name: 🇭🇰 HK,filter: 香港,<<: *auto,icon: 'https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Hong_Kong.png'}
+
+  - {name: 🇼🇸 TW,filter: 台湾,<<: *auto,icon: 'https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Taiwan.png'}
+
+  - {name: 🇸🇬 SG,filter: 新加坡|狮城,<<: *auto,icon: 'https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Singapore.png'}
+
+  - {name: 🇰🇷 KR,filter: 韩国,<<: *auto,icon: 'https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Korea.png'}
+
+  - {name: 🇯🇵 JP,filter: 日本,<<: *auto,icon: 'https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Japan.png'}
+
+  - {name: 🇺🇸 US,filter: 美国,<<: *auto,icon: 'https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/United_States.png'}
+
+rule-providers:
+  ADS:
+    type: http
+    behavior: domain
+    url: "https://adrules.top/adrules_domainset.txt"
+    format: text
+    interval: 86400
+
+  ADS-PRO:
+    type: http
+    behavior: domain
+    url: "https://github.com/DustinWin/ruleset_geodata/releases/download/clash-ruleset/ads.mrs"
+    path: ./ads.mrs
+    format: mrs
+    interval: 86400
+
+sub-rules:
+  rule1:
+   - MATCH,🇨🇳 DOMESTIC
+   - MATCH,REJECT
+
+rules:
+  - DST-PORT,53,DNS-OUT
+  - AND,((DST-PORT,443),(NETWORK,UDP)),REJECT
+  - OR,((RULE-SET,ADS),(RULE-SET,ADS-PRO)),REJECT
+  - OR,((GEOSITE,Google),(GEOIP,Google,NO-RESOLVE)),🎉 Google
+  - OR,((GEOSITE,Twitter),(GEOIP,Twitter,NO-RESOLVE)),🐦 Twitter
+  - OR,((GEOSITE,Telegram),(GEOIP,Telegram,NO-RESOLVE)),💬 Telegram
+  - OR,((GEOSITE,GEOLOCATION-!CN),(GEOIP,Cloudflare,NO-RESOLVE)),🇺🇳 OVERSEAS
+  - SUB-RULE,(OR,((GEOSITE,CN),(GEOIP,CN,NO-RESOLVE))),rule1
+  - OR,((GEOSITE,PRIVATE),(GEOIP,PRIVATE,NO-RESOLVE)),DIRECT
+  - MATCH,🇺🇳 OVERSEAS
+  - MATCH,REJECT
