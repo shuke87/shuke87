@@ -1,4 +1,4 @@
-﻿mixed-port: 7890
+mixed-port: 7890
 ipv6: true
 allow-lan: true
 unified-delay: true
@@ -82,7 +82,7 @@ pr: &pr
       lazy: true
 
 proxy-providers:
-    胖虎:
+  胖虎:
     url: "https://mirror.ghproxy.com/https://raw.githubusercontent.com/gitbigg/dy/main/jd"
     path: ./胖虎.yaml
     <<: *pr
@@ -97,9 +97,9 @@ proxy-providers:
     path: ./空想家vmess.yaml
     <<: *pr
 
-  白嫖:
-    url: ""
-    path: ./白嫖.yaml
+  空想家ssr:
+    url: "https://raw.githubusercontent.com/Huibq/TrojanLinks/master/links/ssr"
+    path: ./空想家ssr.yaml
     <<: *pr
 
   旺财:
