@@ -88,7 +88,7 @@ proxy-providers:
     <<: *pr
 
   Hello:
-    url: ""
+    url: "https://flynb.site/sub/?token=F9F9zZcllpdyN5TluF9F9zZF9F9zZ11EEfx0g&tag=mixed"
     path: ./Hello.yaml
     <<: *pr
 
@@ -97,9 +97,9 @@ proxy-providers:
     path: ./空想家vmess.yaml
     <<: *pr
 
-  空想家ssr:
-    url: "https://raw.githubusercontent.com/Huibq/TrojanLinks/master/links/ssr"
-    path: ./空想家ssr.yaml
+  白嫖:
+    url: "https://raw.githubusercontent.com/Jsnzkpg/Jsnzkpg/Jsnzkpg/Jsnzkpg"
+    path: ./白嫖.yaml
     <<: *pr
 
   旺财:
