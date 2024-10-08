@@ -98,7 +98,7 @@ proxy-providers:
     <<: *pr
 
   白嫖:
-    url: "https://raw.githubusercontent.com/Jsnzkpg/Jsnzkpg/Jsnzkpg/Jsnzkpg"
+    url: "https://raw.githubusercontent.com/ripaojiedian/freenode/main/sub"
     path: ./白嫖.yaml
     <<: *pr
 
