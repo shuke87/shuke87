@@ -108,7 +108,7 @@ proxy-providers:
     <<: *pr
 
 
-use: &use {use: [胖虎,Hello,空想家vmess,空想家ssr,旺财]}
+use: &use {use: [胖虎,Hello,空想家vmess,白嫖,旺财]}
 
 pres: &pres
   proxies: [🇺🇳 OVERSEAS,🇺🇸 US,🇭🇰 HK,🇼🇸 TW,🇸🇬 SG,🇰🇷 KR,🇯🇵 JP,REJECT,DIRECT]
