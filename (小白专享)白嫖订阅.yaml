@@ -1,66 +1,66 @@
-﻿mixed-port: 7890
-ipv6: true
-allow-lan: true
-unified-delay: true
-tcp-concurrent: true
-external-controller: 127.0.0.1:9090
-external-ui: ui
-external-ui-url: "https://github.com/MetaCubeX/metacubexd/archive/refs/heads/gh-pages.zip"
+﻿混合港口           : 7890
+ IPv6           : 真实的
+ 流线型           : 真实的
+ 单拖的         : 真实的
+ TPC同步的       : 真实的
+ 外部控制器      : 127.0.0.1 : 9090 : 9090
+ 外部      : 外部用户 : 用户界面
+ 外部的      : "HTPS://吉图布..../梅塔库克斯/梅塔库布/档案馆/档案馆/档案馆/黑头/页页。
 
-geodata-mode: true
-geo-auto-update: true
-geo-update-interval: 24
-geox-url:
-  geoip: "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/latest/download/geoip.dat"
-  geosite: "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/latest/download/geosite.dat"
-  mmdb: "https://github.com/Loyalsoldier/geoip/releases/latest/download/Country.mmdb"
-  asn: "https://github.com/xishang0128/geoip/releases/download/latest/GeoLite2-ASN.mmdb"
+ 地球数据模式      : 真实的
+ 地理自动更新      : 真实的
+ 地理更新-间隔      : 24
+ 格克斯乌尔      :
+  杰伊普      : "httPS://github.com/Loyal31-/V2-规则-日期/发布/最新/下载/地理信息网。
+  地球人      : "httPS://github.com/Loyalmos/V2-规则-日期/发布/最新/下载/地球。
+  Mmdb     : "https://giwsubcom/Loyal31-/地理信息网/发布/最新/下载/国家。Mmdb"
+  阿森     : "httPS://githb.com/西双港0128/地理IP/释放/下载/最新/地理信息2/mmdb"
 
-find-process-mode: strict
-global-client-fingerprint: chrome
+ 最后程序-模式     : 确定程序模式 : 严格
+global-client-fingerprint   : global-client-fingerprint :目标1
 
-profile:
-  store-selected: true
-  store-fake-ip: true
+ 轮廓  :
+  商店选择的  : 真实的
+  商店仿造品  : 真实的
 
-sniffer:
-  enable: true
-  sniff:
-    HTTP:
-      ports: [80, 8080-8880]
-      override-destination: true
-    TLS:
-      ports: [443, 8443]
-    QUIC:
-      ports: [443, 8443]
-  skip-domain:
-    - "Mijia Cloud"
+ 嗅闻者  :
+  使能  : 真实的
+  嗅出  :
+    高分辨率  :
+      港口
+      目的地过多    : 真实的
+    技术支持系统    :
 
-tun:
-  enable: true
-  stack: mixed
-  dns-hijack:
+    奎克    :
+
+  机顶楼    :
+    - "米嘉云"
+
+ 图恩    :
+  使能    : 真实的
+  堆    :       堆 : 混合的
+  劫持毒品者   :
     - "any:53"
     - "tcp://any:53"
-  auto-route: true
-  auto-redirect: true
-  auto-detect-interface: true
+  自动路由   : 真实的
+  自动重定向   : 真实的
+  auto-detect-interface   : 真实的
 
-dns:
-  enable: true
-  respect-rules: false
-  default-nameserver: [180.76.76.76,180.184.1.1]
-  enhanced-mode: fake-ip
-  fake-ip-range: 198.18.0.1/16
-  fake-ip-filter-mode: blacklist
-  fake-ip-filter:
+ 丹麦网址   :
+  使能   : 真实的
+  尊重规则   : 假的
+  违约者   : [  违约者   : [ 180.76.76.76   , 180.184.1.1   ], 180.184.1.1, 180.184.1.1]
+  增强模式 :    增强模式 : 模拟-IP
+  仿冒的 :    仿冒的 : 198.18.0.1/16
+  仿冒式 :    传真模式 : 黑名单
+  传真机 :
     - '+.lan'
     - '+.local'
   nameserver-policy:
     "geosite:cn,private":
-    - https://dns.alidns.com/dns-query
-    - https://doh.pub/dns-query
-  nameserver:
+    -     - https://dns.alidns.com/dns-query
+    -- https://doh.pub/dns-query
+  命名者 :
     - https://cloudflare-dns.com/dns-query
     - https://dns.google/dns-query
   proxy-server-nameserver:
@@ -97,9 +97,9 @@ proxy-providers:
     path: ./空想家vmess.yaml
     <<: *pr
 
-  空想家ssr:
-    url: "https://raw.githubusercontent.com/Huibq/TrojanLinks/master/links/ssr"
-    path: ./空想家ssr.yaml
+  白嫖:
+    url: "https://sub.tgzdyz2.xyz/sub"
+    path: ./白嫖.yaml
     <<: *pr
 
   旺财:
