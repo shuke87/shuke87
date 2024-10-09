@@ -57,7 +57,7 @@ proxy-providers:
   胖虎:
     <<: *p
     # path: ./proxy_provider/胖虎.yaml
-    url: "https://mirror.ghproxy.com/https://raw.githubusercontent.com/gitbigg/dy/main/jd"
+    url: "https://raw.githubusercontent.com/gitbigg/dy/main/jd"
 
   空想家:
     <<: *p
