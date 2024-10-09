@@ -252,7 +252,7 @@ proxy_groups_direct: &proxy_groups_direct {type: select, proxies: [🌐 全球�
 
 proxy-groups:
   - {name: 🧭 探索大陆, type: select, proxies: [#🗺 选择节点, 🌸 自动切换, #🌿 负载均衡, 🌐 全球直连, #🏖 手动切换1, #🏖 手动切换2]}
-  # {name: 🗺 选择节点, type: select, proxies: [🌸 自动切换, 🌐 全球直连], include-all-providers: true}
+  # {name: 🗺 选择节点, type: select, proxies: [#🌸 自动切换, #🌐 全球直连], include-all-providers: true}
   - {name: 🌸 自动切换, type: url-test, include-all-providers: true, tolerance: 5}
   # {name: 🌿 负载均衡, <<: *proxy_groups_use_load_balance}
   # {name: 🏖 手动切换1, <<: *proxy_groups_select_1_2}
