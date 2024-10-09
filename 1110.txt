@@ -47,6 +47,7 @@ use: &use
   use:
     - 胖虎
     - 空想家
+    - hello
     # - 本地配置
 
 # 订阅链接
@@ -63,6 +64,10 @@ proxy-providers:
     # path: ./proxy_provider/空想家.yaml
     url: "https://raw.githubusercontent.com/Huibq/TrojanLinks/master/links/vmess"
 
+hello:
+    <<: *p
+    # path: ./proxy_provider/hello.yaml
+    url: "https://flynb.site/sub/?token=F9F9zZcllpdyN5TluF9F9zZF9F9zZ11EEfx0g&tag=mixed"
 
   # 本地配置:
     # <<: *p
