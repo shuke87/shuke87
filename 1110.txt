@@ -57,7 +57,7 @@ proxy-providers:
   胖虎:
     <<: *p
     # path: ./proxy_provider/胖虎.yaml
-    url: "https://igdux.top/~Clash"
+    url: "https://mirror.ghproxy.com/https://raw.githubusercontent.com/gitbigg/dy/main/jd"
 
   空想家:
     <<: *p
@@ -67,7 +67,7 @@ proxy-providers:
    订阅号：
     <<: *p
     # path: ./proxy_provider/订阅号.yaml
-    url: "https://sub.xn--9sw509f.eu.org/auto"
+    url: "https://igdux.top/~Clash"
 
   # 本地配置:
     # <<: *p
