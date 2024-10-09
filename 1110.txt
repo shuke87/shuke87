@@ -1,5 +1,4 @@
 ﻿# mihomo (Clash Meta) 懒人配置
-#由cyy魔改    edited by cyy
 # https://gist.github.com/liuran001/5ca84f7def53c70b554d3f765ff86a33，以上为原版链接，致敬原作者！
 # 分组
 pr:
