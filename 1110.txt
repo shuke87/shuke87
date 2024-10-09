@@ -307,7 +307,7 @@ proxy-groups:
   - { name: 日本🇯🇵, <<: *use, filter: "(?i)日本|jp|japan" ,icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Japan.png}
   - { name: 日本🇯🇵auto, <<: *use, filter: "(?i)日本|jp|japan" ,icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Japan.png ,type: url-test}
   - { name: 美国🇺🇸, <<: *use, filter: "(?i)美|us|unitedstates|united states" ,icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/United_States.png}
-  - { name: 美国🇺🇸auto, <<: *use, filter: "(?i)美|us|unitedstates|united states" ,icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/United_States.png ,type: url-test}
+  - { name: 美国🇺🇸auto, <<: * *use ,icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/UN.png}
   - { name: 新加坡🇸🇬, <<: *use, filter: "(?i)(新|sg|singapore)" ,icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Singapore.png}
   - { name: 新加坡🇸🇬auto, <<: *use, filter: "(?i)(新|sg|singapore)" ,icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Singapore.png ,type: url-test}
   - { name: 全部节点🇺🇳, <<: *use ,icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/UN.png }
