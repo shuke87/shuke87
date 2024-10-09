@@ -64,6 +64,10 @@ proxy-providers:
     # path: ./proxy_provider/空想家.yaml
     url: "https://raw.githubusercontent.com/Huibq/TrojanLinks/master/links/vmess"
 
+  订阅号:
+    <<: *p
+    # path: ./proxy_provider/订阅号.yaml
+    url: "https://raw.githubusercontent.com/Huibq/TrojanLinks/master/links/vmess"
   # 本地配置:
     # <<: *p
     # path: ./proxy_provider/本地配置.yaml
